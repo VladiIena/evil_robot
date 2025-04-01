@@ -107,49 +107,13 @@ async def handle_deepseek(bot: Bot, event: Event):
 
 
 
-        voice_model=user_settings.get("voice_model","七海")
+        voice_model=user_settings.get("voice_model","七海")#改为你的语音模型路径
         if(voice_model=="七海"):
             switch_model("gpt", r"D:\abababa\nonebot-chatgpt\GPT-SoVITS-v3lora-20250228\GPT_weights_v2\七海GPT.ckpt")
             switch_model("sovits", r"D:\abababa\nonebot-chatgpt\GPT-SoVITS-v3lora-20250228\SoVITS_weights_v2\七海SoVITS.pth")
             refer_wav_path="D:/abababa/nonebot-chatgpt/数据集/七海/Nana7mi/Nana7mi_1104.wav"
             prompt_text = "不是鲨鱼卫衣那套其实就已经就是卫衣本身就是很宽松的那一套已经有曲线了好吗总有人觉得我是。"
             language="zh"
-        elif (voice_model=="东雪莲"):
-            switch_model("gpt", r"D:\abababa\nonebot-chatgpt\GPT-SoVITS-v3lora-20250228\GPT_weights_v2\东雪莲GPT.ckpt")
-            switch_model("sovits", r"D:\abababa\nonebot-chatgpt\GPT-SoVITS-v3lora-20250228\SoVITS_weights_v2\东雪莲SoVITS.pth")
-            refer_wav_path = "D:/abababa/nonebot-chatgpt/数据集/东雪莲/Azuma/Azuma_238.wav"
-            prompt_text= "高考差六分没考上他想考得上的学校但是他去了另外一所，不错的大学，等他上完大学之后给再发些什么他就是敷衍的啊啊嗯嗯的回答。"
-            language = "zh"
-        elif (voice_model=="张维为"):
-            switch_model("gpt", r"D:\abababa\nonebot-chatgpt\GPT-SoVITS-v3lora-20250228\GPT_weights_v2\zww-e5.ckpt")
-            switch_model("sovits", r"D:\abababa\nonebot-chatgpt\GPT-SoVITS-v3lora-20250228\SoVITS_weights_v2\zww_e8_s112.pth")
-            refer_wav_path = r"D:\abababa\nonebot-chatgpt\数据集\zww\1.要给他迎头痛击 张维为老师金句锦集06(Av518956763,P1).mp3_0004628160_0004750400.wav"
-            prompt_text= "他如果真的是发现问题的时候，他会及时。"
-            language = "zh"
-        elif (voice_model=="丰川祥子"):
-            switch_model("gpt", r"D:\abababa\nonebot-chatgpt\GPT-SoVITS-v3lora-20250228\GPT_weights_v2\丰川祥子V2-e30.ckpt")
-            switch_model("sovits", r"D:\abababa\nonebot-chatgpt\GPT-SoVITS-v3lora-20250228\SoVITS_weights_v2\丰川祥子V2_e150_s1500.pth")
-            refer_wav_path = r"D:\abababa\nonebot-chatgpt\数据集\Ave Mujica模型\祥子\sakiko\sakikoV2 (2).wav"
-            prompt_text = "私がいなくてもできたでしょ練習したいならすればいいでしょ全員揃わないとできないルールなんてありませんわ"
-            language = "ja"
-        elif (voice_model=="soyo"):
-            switch_model("gpt", r"D:\abababa\nonebot-chatgpt\GPT-SoVITS-v3lora-20250228\GPT_weights_v2\长崎素世V2.1-e30.ckpt")
-            switch_model("sovits", r"D:\abababa\nonebot-chatgpt\GPT-SoVITS-v3lora-20250228\SoVITS_weights_v2\长崎素世V2.1_e20_s360.pth")
-            refer_wav_path = r"D:\abababa\nonebot-chatgpt\数据集\mygo\素世\soyoV2\soyo (1).wav"
-            prompt_text = "さきちゃん、よかった。来てくれて。びしょ濡れじゃない？大丈夫？"
-            language = "ja"
-        elif (voice_model=="睦子米"):
-            switch_model("gpt", r"D:\abababa\nonebot-chatgpt\GPT-SoVITS-v3lora-20250228\GPT_weights_v2\Mutsumi-beta-0103.ckpt")
-            switch_model("sovits", r"D:\abababa\nonebot-chatgpt\GPT-SoVITS-v3lora-20250228\SoVITS_weights_v2\Mutsumi-beta-0103.pth")
-            refer_wav_path = r"D:\abababa\nonebot-chatgpt\ttsmodel\GPT-SoVITS\model_Mutsumi_beta_0103\model_Mutsumi_beta_0103\サキ、ムシカが壊れたらサキも.wav"
-            prompt_text = "サキ、ムシカが壊れたらサキも"
-            language = "ja"
-        elif (voice_model=="墨提斯"):
-            switch_model("gpt", r"D:\abababa\nonebot-chatgpt\GPT-SoVITS-v3lora-20250228\GPT_weights_v2\Mortis_0104_fix_dpo.ckpt")
-            switch_model("sovits", r"D:\abababa\nonebot-chatgpt\GPT-SoVITS-v3lora-20250228\SoVITS_weights_v2\Mortis_0104_fix_dpo.pth")
-            refer_wav_path = r"D:\abababa\nonebot-chatgpt\ttsmodel\GPT-SoVITS\model_Mortis_0104_fix_dpo\model_Mortis_0104_fix_dpo\むつみちゃんとむつみちゃんの大好きなバンドは守るから.wav"
-            prompt_text = "サキ、ムシカが壊れたらサキも"
-            language = "ja"
         else :
             switch_model("gpt", r"D:\abababa\nonebot-chatgpt\GPT-SoVITS-v3lora-20250228\GPT_weights_v2\七海GPT.ckpt")
             switch_model("sovits",

@@ -55,13 +55,13 @@ async def handle_deepseek(bot: Bot, event: Event):
 
     if model=="gpt-4o":
         client = AzureOpenAI(
-            azure_endpoint="https://ai-buddha1122117032ai242554509491.openai.azure.com/",
-            api_key="Dv9JLSL6JCRhQE8Drp3bCkdwevZyODGbOtNxle2RqQIR0M3y6EQ2JQQJ99BCACHYHv6XJ3w3AAAAACOG0JOr",
+            azure_endpoint="<your endpiont here>",
+            api_key="<your api key here>",
 
             api_version="2024-05-01-preview"
         )
     else:#deepseek-r1
-        client = OpenAI(api_key="sk-GcjLgOylwq0zvMJrvIrY3nsE6eedP6LLwxHvJlfnk51V4UCJ",
+        client = OpenAI(api_key="<your api key here>",
                     base_url="https://api.lkeap.cloud.tencent.com/v1")
 
     #api请求模块

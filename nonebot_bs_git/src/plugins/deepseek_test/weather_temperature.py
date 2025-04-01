@@ -2,12 +2,12 @@ import requests
 
 url = 'https://restapi.amap.com/v3/weather/weatherInfo?parameters'
 params_realtime = {
-    'key':'e70ae0cf9b665779fa97321e548151c7',
+    'key':'<your api key here>',
     'city':'410103', # 从城市编码里获取的a丢包code
     'extensions':'base' # 获取实时天气
 }
 params_estimate = {
-    'key':'e70ae0cf9b665779fa97321e548151c7',
+    'key':'<your api key here>',
     'city':'410103',
     'extensions':'all' #获取预报天气
 }
